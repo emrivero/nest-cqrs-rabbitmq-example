@@ -2,24 +2,24 @@
 
 [Nest](https://github.com/kamilmysliwiec/nest) framework [CQRS module](https://github.com/kamilmysliwiec/nest-cqrs) usage example.
 
-This project uses a custom Kafka event bus for usage with the CQRS module.
+This project uses a custom RabbitMQ event bus for usage with the CQRS module.
 
 ## Setup
 
-To run the project, be sure to spin up the necessary Kafka/Zookeeper nodes using:
+To run the project, be sure to spin up the necessary RabbitMQ container using:
 
 ````
-docker-compose up
+docker-compose up -d
 ````
 
-Once the Kafka broker is running you can start the Nest service using:
+Once the RabbitMQ broker is running you can start the Nest service using:
 
 ```
+$ npm install
 $ npm start
 ```
 
 To test the end-to-end flow of the commands, events and sagas, execute the following curl command
-
 ```
  curl -X POST http://localhost:3000/hero/1234/kill
 ```
