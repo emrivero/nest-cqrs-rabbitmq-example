@@ -35,11 +35,10 @@ Async HeroFoundItemEvent...
 ```
 
 Its also a good idea to inspect the message queue to ensure the necessary events have been
-sent. This can be done using the Kafka console consumer tool:
+sent. This can be done using RabbitMQ UI in localhost:15672
 
-````
-./kafka-console-consumer.sh --bootstrap-server queue-kafka-bootstrap:9092 --topic HeroFoundItemEvent
-````
+user: admin
+pass:admin
 
 ## Stay in touch
 
